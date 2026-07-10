@@ -1,0 +1,16 @@
+{
+  "name": "aborogodo-landing-page",
+  "version": "1.0.0",
+  "description": "Borogodó Landing Page - Premium Static HTML",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}
