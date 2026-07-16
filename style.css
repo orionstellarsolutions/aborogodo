@@ -9,11 +9,11 @@ body {
     position: relative;
 }
 
-/* Ajustes tipográficos para emular a Almarai e Montserrat */
+/* Ajustes tipográficos originais */
 .tan-garland-style {
-    font-family: 'Almarai', sans-serif;
-    font-weight: 800;
-    letter-spacing: -0.01em;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    letter-spacing: -0.03em;
 }
 
 .theme-transition {
