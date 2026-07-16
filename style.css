@@ -2,6 +2,7 @@
 html {
     overflow-x: hidden;
 }
+
 body {
     width: 100%;
     margin: 0;
@@ -39,6 +40,7 @@ body {
 
 #logo-text {
     width: 100px;
+    height: auto;
     clip-path: inset(25% 0% 25% 0%);
     margin-top: -12.5%;
     margin-bottom: -12.5%;
@@ -195,6 +197,7 @@ body {
 
 /* Ondas Fluidas em Maresia */
 @keyframes waveMotion {
+
     0%,
     100% {
         transform: translateY(0) scaleY(1);
@@ -211,6 +214,7 @@ body {
 
 /* Balanço Elegante do Coqueiro */
 @keyframes palmSway {
+
     0%,
     100% {
         transform: rotate(0deg);
@@ -228,6 +232,7 @@ body {
 
 /* Slosh do Drink ao carregar/loop */
 @keyframes sloshDrink {
+
     0%,
     100% {
         transform: rotate(0deg) skewX(0deg);
@@ -266,6 +271,7 @@ body {
 
 /* Ingredientes flutuando e emergindo */
 @keyframes floatIngredient {
+
     0%,
     100% {
         transform: translateY(15px);

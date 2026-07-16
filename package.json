@@ -4,6 +4,7 @@
   "description": "Borogodó Landing Page - Premium Static HTML",
   "main": "script.js",
   "scripts": {
+    "start": "npx live-server",
     "test": "jest"
   },
   "devDependencies": {
