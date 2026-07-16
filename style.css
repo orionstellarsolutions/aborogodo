@@ -1,8 +1,19 @@
-/* Ajustes tipográficos para emular a Tan Garland */
+/* Ajustes de layout globais para evitar overflow lateral e vertical indesejado */
+html {
+    overflow-x: hidden;
+}
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Ajustes tipográficos para emular a Almarai e Montserrat */
 .tan-garland-style {
-    font-family: 'Fraunces', serif;
-    font-variation-settings: "opsz" 72, "wonk" 1;
-    letter-spacing: -0.03em;
+    font-family: 'Almarai', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.01em;
 }
 
 .theme-transition {
@@ -63,10 +74,10 @@
 /* Animações e Efeitos Ambientais para Bossa & Brisa */
 .swaying-leaves {
     position: absolute;
-    top: -10%;
-    right: -10%;
+    top: 0;
+    right: 0;
     width: 60%;
-    height: 120%;
+    height: 100vh;
     background: radial-gradient(circle, rgba(59, 81, 41, 0.08) 0%, transparent 70%);
     mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10,90 Q40,40 90,10 M20,80 Q50,50 80,30' stroke='black' stroke-width='4' fill='none'/%3E%3C/svg%3E");
     animation: sway 12s ease-in-out infinite alternate;
@@ -74,6 +85,8 @@
     z-index: 1;
     transform-origin: top right;
     display: none;
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 @keyframes sway {
@@ -182,7 +195,6 @@
 
 /* Ondas Fluidas em Maresia */
 @keyframes waveMotion {
-
     0%,
     100% {
         transform: translateY(0) scaleY(1);
@@ -199,7 +211,6 @@
 
 /* Balanço Elegante do Coqueiro */
 @keyframes palmSway {
-
     0%,
     100% {
         transform: rotate(0deg);
@@ -217,7 +228,6 @@
 
 /* Slosh do Drink ao carregar/loop */
 @keyframes sloshDrink {
-
     0%,
     100% {
         transform: rotate(0deg) skewX(0deg);
@@ -256,7 +266,6 @@
 
 /* Ingredientes flutuando e emergindo */
 @keyframes floatIngredient {
-
     0%,
     100% {
         transform: translateY(15px);

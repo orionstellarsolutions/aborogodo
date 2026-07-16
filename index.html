@@ -4,19 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borogodó — Iconic Brands</title>
+    <title>Borogodó • Marcas com raiz.</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Fonts oficiais emuladas com precisão milimétrica -->
+    <!-- Google Fonts: Almarai para títulos e Montserrat para textos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Fraunces simula a Tan Garland (com eixos ópticos e curvas expressivas) -->
-    <!-- Plus Jakarta Sans simula a Canva Sans (geométrica e limpa) -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- FontAwesome para iconografia de suporte -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -27,7 +22,6 @@
 
 <body id="main-body"
     class="bg-creamWhite text-forestGreen font-canvasans antialiased theme-transition noise-texture selection:bg-vibrantOrange selection:text-white">
-
 
     <!-- CURSOR PERSONALIZADO (Ativo apenas nas Vibes interativas) -->
     <div id="custom-cursor"></div>
@@ -42,54 +36,48 @@
     <div id="bubbles-ambient" class="bubble-container"></div>
 
     <!-- HEADER / NAVIGATION -->
-    <header class="w-full py-8 px-6 md:px-12 lg:px-20 flex justify-between items-start relative z-20">
-        <!-- Logo Stacked oficial: BORO GODO -->
-        <a href="#" class="group flex items-start gap-3 focus:outline-none interactive-target">
-            <!-- <div class="w-10 h-10 rounded-full border-2 border-forestGreen flex items-center justify-center font-tangarland font-black text-xl text-forestGreen transition-colors group-hover:bg-vibrantOrange group-hover:text-creamWhite group-hover:border-vibrantOrange theme-transition"
-                id="logo-badge">
-                B
-            </div> -->
-            <div class="flex flex-col leading-none">
-                <image src="assets/borogodo.svg" alt="Logo Borogodó" class="theme-transition" id="logo-text">
-                </image>
-                <span
-                    class="text-[8px] uppercase tracking-[0.3em] font-semibold text-vibrantOrange mt-1 theme-transition"
-                    id="logo-sub">
-                    Est. 2026 / Brasil
-                </span>
-            </div>
-        </a>
+    <header class="w-full py-8 px-6 md:px-12 lg:px-20 flex flex-col md:flex-row justify-between items-center gap-4 relative z-20">
+        <div class="flex flex-col items-center md:items-start text-center md:text-left">
+            <a href="#" class="group flex items-start gap-3 focus:outline-none interactive-target">
+                <div class="flex flex-col leading-none">
+                    <img src="assets/borogodo.svg" alt="Logo Borogodó" class="theme-transition h-6" id="logo-text">
+                    <span class="text-[8px] uppercase tracking-[0.3em] font-semibold text-vibrantOrange mt-1 theme-transition" id="logo-sub">
+                        Est. 2026 / Brasil
+                    </span>
+                </div>
+            </a>
+            <!-- Eyebrow do Header -->
+            <span class="text-[9px] font-bold text-forestGreen/70 tracking-widest uppercase mt-2 block">
+                ACREDITAMOS QUE UMA MARCA TEM RAIZ E RAIZ NÃO É ESTÉTICA, É ESTRUTURA.
+            </span>
+        </div>
 
         <!-- Menu Navigation -->
-        <nav class="hidden md:flex items-center gap-10 text-xs font-bold tracking-widest uppercase text-forestGreen/80 mt-2 theme-transition"
-            id="nav-links">
+        <nav class="flex items-center gap-6 lg:gap-10 text-xs font-bold tracking-widest uppercase text-forestGreen/80 theme-transition" id="nav-links">
             <a href="#sobre" class="hover:text-vibrantOrange transition-colors interactive-target">Manifesto</a>
-            <a href="#servicos" class="hover:text-vibrantOrange transition-colors interactive-target">Serviços</a>
-            <a href="#cronicas" class="hover:text-vibrantOrange transition-colors interactive-target">Crônicas</a>
-            <a href="#contato" class="hover:text-vibrantOrange transition-colors interactive-target">Fazer Barulho</a>
+            <a href="#servicos" class="hover:text-vibrantOrange transition-colors interactive-target">Nosso Gingado</a>
+            <a href="#cronicas" class="hover:text-vibrantOrange transition-colors interactive-target">Repertório</a>
+            <a href="#contato" class="hover:text-vibrantOrange transition-colors interactive-target">Vamos Conversar</a>
         </nav>
 
         <!-- CTA Principal -->
         <div class="mt-1">
             <a href="#contato" id="header-cta"
                 class="inline-block px-6 py-3 rounded-full border-2 border-forestGreen text-forestGreen font-bold text-xs uppercase tracking-widest hover:bg-forestGreen hover:text-creamWhite transition-all duration-300 theme-transition interactive-target">
-                Criar Legado
+                Fazer Barulho
             </a>
         </div>
     </header>
 
-
-    <!-- HERO SECTION -->
-    <section id="hero-section"
-        class="min-h-[90vh] flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-8 pb-20 relative overflow-hidden theme-transition">
-
-        <!-- ELEMENTO GRÁFICO OFICIAL: Brasilidade Borogodó Sentimento -->
-        <div id="rotating-seal"
+    <!-- NEW HERO SECTION -->
+    <section id="new-hero-section" class="min-h-[75vh] flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-8 pb-20 relative overflow-hidden theme-transition">
+        <!-- Rotating Seal -->
+        <div id="rotating-seal-hero"
             class="absolute right-6 md:right-20 top-12 w-32 h-32 md:w-48 md:h-48 flex items-center justify-center animate-[spin_30s_linear_infinite] select-none opacity-95 z-10">
             <svg viewBox="0 0 100 100" class="w-full h-full">
-                <path id="sealPath" d="M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" fill="none" />
-                <text class="fill-forestGreen font-bold uppercase tracking-[0.18em] theme-transition" id="seal-text">
-                    <textPath href="#sealPath" class="text-[8.5px] font-canvasans">
+                <path id="sealPathHero" d="M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" fill="none" />
+                <text class="fill-forestGreen font-bold uppercase tracking-[0.18em] theme-transition" id="seal-text-hero">
+                    <textPath href="#sealPathHero" class="text-[8.5px] font-canvasans">
                         • BRASIL • BOROGODÓ • BRANDING
                     </textPath>
                 </text>
@@ -97,7 +85,82 @@
         </div>
 
         <div class="max-w-7xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-8 space-y-8">
+                <!-- Tag de Posicionamento -->
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-forestGreen/10 text-forestGreen text-xs font-bold uppercase tracking-widest theme-transition">
+                    <span class="w-2 h-2 rounded-full bg-vibrantOrange"></span>
+                    <span>Marcas com raiz.</span>
+                </div>
 
+                <!-- Headline Monumental (Almarai Style) -->
+                <h1 class="tan-garland-style text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold tracking-tight leading-[1.0] text-forestGreen theme-transition">
+                    Transformamos marcas <br />
+                    através de <span class="text-vibrantOrange italic font-normal">design sensorial</span> <br />
+                    e rituais de branding.
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="text-lg md:text-xl text-stone-700 leading-relaxed max-w-2xl font-canvasans theme-transition">
+                    Assim como o Brasil, nenhuma marca nasce pronta. Ela é feita de histórias, encontros, repertório e tempo. É desse encontro entre estratégia, cultura e identidade que surgem marcas capazes de permanecer.
+                </p>
+
+                <!-- Botões de Ação -->
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="#"
+                        class="inline-flex items-center justify-center gap-3 px-8 py-5 rounded-full bg-forestGreen text-creamWhite font-bold text-sm uppercase tracking-wider hover:bg-vibrantOrange transition-colors duration-300 theme-transition interactive-target">
+                        Agendar café virtual / Reunião de alinhamento <i class="fa-solid fa-mug-hot text-warmGold"></i>
+                    </a>
+                    <a href="#rituals-section"
+                        class="inline-flex items-center justify-center gap-3 px-8 py-5 rounded-full border-2 border-forestGreen text-forestGreen font-bold text-sm uppercase tracking-wider hover:bg-forestGreen hover:text-creamWhite transition-colors duration-300 theme-transition interactive-target">
+                        Entenda nosso método. <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Coluna de Apoio Visual Estético -->
+            <div class="lg:col-span-4 hidden lg:block">
+                <div class="relative w-full aspect-[4/5] bg-vibrantOrange/5 rounded-[3rem] border-2 border-forestGreen p-8 flex flex-col justify-between overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-warmGold/10 via-transparent to-skyBlue/10 pointer-events-none"></div>
+                    <div class="flex justify-between items-start z-10">
+                        <span class="text-3xl font-tangarland font-bold text-forestGreen">B.</span>
+                        <span class="text-xs uppercase tracking-widest font-bold text-vibrantOrange">Estúdio de Arte</span>
+                    </div>
+
+                    <!-- Novo SVG de Linha Contínua -->
+                    <div class="w-full h-56 relative flex items-center justify-center overflow-hidden">
+                        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="fine-line-path" d="M 30,160 C 50,160 55,140 60,110 C 65,80 50,60 70,40 C 90,20 120,30 130,55 C 135,70 125,90 140,105 C 155,120 170,110 180,140" stroke="#3b5129" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path class="fine-line-path" d="M 120,60 C 130,40 160,30 170,50 C 160,70 140,75 130,70 C 120,65 110,75 100,70" stroke="#e75d0b" stroke-width="1.2" stroke-linecap="round" />
+                            <circle cx="75" cy="50" r="22" stroke="#fdb244" stroke-width="1" stroke-dasharray="4 3" />
+                            <circle cx="130" cy="55" r="4.5" fill="#fdb244" />
+                        </svg>
+                    </div>
+
+                    <div class="text-xs text-stone-600 space-y-1 z-10">
+                        <p class="font-bold">ORION DESIGN CO.</p>
+                        <p class="opacity-75">All Rights Reserved © 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE RITUALS SECTION (DESLOCADA PARA CAIXA ABAIXO) -->
+    <section id="rituals-section" class="py-24 px-6 md:px-12 lg:px-20 bg-creamWhite border-t border-b border-forestGreen/10 relative overflow-hidden theme-transition animate-reveal">
+        <!-- Brasilidade Borogodó Sentimento -->
+        <div id="rotating-seal"
+            class="absolute right-6 md:right-20 top-12 w-32 h-32 md:w-48 md:h-48 flex items-center justify-center animate-[spin_30s_linear_infinite] select-none opacity-95 z-10">
+            <svg viewBox="0 0 100 100" class="w-full h-full">
+                <path id="sealPath" d="M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" fill="none" />
+                <text class="fill-forestGreen font-bold uppercase tracking-[0.18em] theme-transition" id="seal-text">
+                    <textPath href="#sealPath" class="text-[8.5px] font-canvasans">
+                        • BRASIL • BRANDING • RITUAIS
+                    </textPath>
+                </text>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-8 space-y-8">
                 <!-- Tag de Posicionamento usando cores integradas -->
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-forestGreen/10 text-forestGreen text-xs font-bold uppercase tracking-widest theme-transition"
@@ -106,44 +169,37 @@
                     <span id="txt-hero-tag" class="editable-field">Branding, Design & Estratégia de Impacto</span>
                 </div>
 
-                <!-- Headline Monumental (Tan Garland Style) -->
-                <h1 id="hero-title"
-                    class="tan-garland-style text-6xl md:text-8xl lg:text-[7.5rem] font-extrabold tracking-tight leading-[0.85] text-forestGreen theme-transition">
-                    We create <br />
-                    <span class="text-vibrantOrange italic font-normal">iconic brands</span> <br />
-                    using <span class="relative">difference<span
-                            class="absolute left-0 bottom-2 w-full h-3 bg-vibrantOrange/15 -z-10"></span></span>.
-                </h1>
+                <!-- Headline Monumental (Almarai Style) -->
+                <h2 id="hero-title"
+                    class="tan-garland-style text-4xl md:text-6xl lg:text-[4.5rem] font-extrabold tracking-tight leading-[1.0] text-forestGreen theme-transition">
+                    Brisa suave, <br />
+                    <span class="text-vibrantOrange italic font-normal">marcas que marcam</span> <br />
+                    como o mar.
+                </h2>
 
-                <!-- PAINEL SENSORIAL "RITUAIS DE BRASILIDADE" (Bossa & Brisa Exclusivo) -->
+                <!-- PAINEL SENSORIAL "RITUAIS DE BRASILIDADE" -->
                 <div id="brisa-control-box" class="space-y-6 max-w-2xl border-t border-b border-forestGreen/10 py-6">
-                    <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-stone-500">Roteiro Sensorial
-                        (Explore o Sentimento)</p>
-                    <div
-                        class="flex flex-wrap gap-x-8 gap-y-4 text-xs font-canvasans tracking-wider uppercase font-semibold">
+                    <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-stone-500">Roteiro Sensorial (Explore o Sentimento)</p>
+                    <div class="flex flex-wrap gap-x-8 gap-y-4 text-xs font-canvasans tracking-wider uppercase font-semibold">
                         <!-- Ritual 1: Coqueiro -->
                         <button onclick="triggerSensoryRitual('coqueiro')" id="ritual-btn-coqueiro"
                             class="group flex items-center gap-2 pb-1 border-b border-transparent hover:border-forestGreen transition-all duration-300 interactive-target">
-                            <span class="font-tangarland italic text-sm text-vibrantOrange mr-1">01/</span> <span
-                                class="editable-field" id="txt-ritual-1">Maresia & Brisa</span>
+                            <span class="font-tangarland italic text-sm text-vibrantOrange mr-1">01/</span> <span class="editable-field" id="txt-ritual-1">Maresia & Brisa</span>
                         </button>
                         <!-- Ritual 2: Drink -->
                         <button onclick="triggerSensoryRitual('drink')" id="ritual-btn-drink"
                             class="group flex items-center gap-2 pb-1 border-b border-transparent hover:border-forestGreen transition-all duration-300 interactive-target">
-                            <span class="font-tangarland italic text-sm text-vibrantOrange mr-1">02/</span> <span
-                                class="editable-field" id="txt-ritual-2">Drink na Praia</span>
+                            <span class="font-tangarland italic text-sm text-vibrantOrange mr-1">02/</span> <span class="editable-field" id="txt-ritual-2">Drink na Praia</span>
                         </button>
                         <!-- Ritual 3: Feijoada -->
                         <button onclick="triggerSensoryRitual('feijoada')" id="ritual-btn-feijoada"
                             class="group flex items-center gap-2 pb-1 border-b border-transparent hover:border-forestGreen transition-all duration-300 interactive-target">
-                            <span class="font-tangarland italic text-sm text-vibrantOrange mr-1">03/</span> <span
-                                class="editable-field" id="txt-ritual-3">Sabor de Herança</span>
+                            <span class="font-tangarland italic text-sm text-vibrantOrange mr-1">03/</span> <span class="editable-field" id="txt-ritual-3">Sabor de Herança</span>
                         </button>
                         <!-- Ritual 4: Café -->
                         <button onclick="triggerSensoryRitual('cafe')" id="ritual-btn-cafe"
                             class="group flex items-center gap-2 pb-1 border-b border-transparent hover:border-forestGreen transition-all duration-300 interactive-target">
-                            <span class="font-tangarland italic text-sm text-vibrantOrange mr-1">04/</span> <span
-                                class="editable-field" id="txt-ritual-4">Conversa & Café</span>
+                            <span class="font-tangarland italic text-sm text-vibrantOrange mr-1">04/</span> <span class="editable-field" id="txt-ritual-4">Conversa & Café</span>
                         </button>
                     </div>
                 </div>
@@ -151,168 +207,89 @@
                 <!-- Manifesto em Destaque -->
                 <p id="hero-desc"
                     class="text-lg md:text-xl text-stone-700 leading-relaxed max-w-2xl font-canvasans theme-transition editable-field">
-                    Criamos histórias de marca conectadas à cultura que reverberam organicamente. Unimos o refinamento
-                    estético à inteligência de mercado para construir o legado da sua empresa.
+                    Experimente a essência do design nacional. Navegue por nossos rituais e sinta a bossa de construir marcas inesquecíveis.
                 </p>
-
-                <!-- Botões de Ação com Cores do Manual -->
-                <div class="flex flex-col sm:flex-row gap-4 pt-4" id="hero-actions">
-                    <a href="#sobre"
-                        class="inline-flex items-center justify-center gap-3 px-8 py-5 rounded-full bg-forestGreen text-creamWhite font-bold text-sm uppercase tracking-wider hover:bg-vibrantOrange transition-colors duration-300 theme-transition interactive-target"
-                        id="hero-primary-btn">
-                        Nossos Detalhes <i class="fa-solid fa-arrow-down text-warmGold"></i>
-                    </a>
-                    <a href="#contato"
-                        class="inline-flex items-center justify-center gap-3 px-8 py-5 rounded-full border-2 border-forestGreen text-forestGreen font-bold text-sm uppercase tracking-wider hover:bg-forestGreen hover:text-creamWhite transition-colors duration-300 theme-transition interactive-target"
-                        id="hero-secondary-btn">
-                        Iniciar Briefing
-                    </a>
-                </div>
             </div>
 
-
-            <!-- Coluna de Apoio Visual Estético (Ilustração de Linha Fina Dinâmica com Paleta Oficial) -->
+            <!-- Coluna de Apoio Visual Estético (Ilustração de Linha Fina Dinâmica) -->
             <div class="lg:col-span-4 hidden lg:block" id="hero-visual-composition">
                 <div class="relative w-full aspect-[4/5] bg-vibrantOrange/5 rounded-[3rem] border-2 border-forestGreen overflow-hidden p-8 flex flex-col justify-between theme-transition"
                     id="visual-card">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-tr from-warmGold/10 via-transparent to-skyBlue/10 pointer-events-none">
-                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-tr from-warmGold/10 via-transparent to-skyBlue/10 pointer-events-none"></div>
 
                     <div class="flex justify-between items-start z-10">
-                        <span class="text-3xl font-tangarland font-bold text-forestGreen theme-transition"
-                            id="visual-brand-letter">B.</span>
-                        <span class="text-xs uppercase tracking-widest font-bold text-vibrantOrange"
-                            id="visual-badge-text">Estúdio de Arte</span>
+                        <span class="text-3xl font-tangarland font-bold text-forestGreen theme-transition" id="visual-brand-letter">B.</span>
+                        <span class="text-xs uppercase tracking-widest font-bold text-vibrantOrange" id="visual-badge-text">Estúdio de Arte</span>
                     </div>
 
-                    <!-- ÁREA DE ILUSTRAÇÕES DINÂMICAS EM VETORES PUROS (SVG - ESTILO TATUAGEM LINHA FINA) -->
-                    <div class="w-full h-56 relative flex items-center justify-center overflow-hidden"
-                        id="visual-illustration-container">
-
-                        <!-- 1. Default / Modernismo Abstrato de Linha Contínua -->
-                        <svg id="svg-default"
-                            class="absolute inset-0 w-full h-full transition-all duration-700 ease-out opacity-100 scale-100"
-                            viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Traço Contínuo Principal -->
-                            <path class="fine-line-path"
-                                d="M 20,150 C 40,110 60,110 80,140 C 100,170 120,130 140,100 C 160,70 140,40 120,60 C 100,80 80,60 60,90 C 40,120 80,160 180,140"
-                                stroke="#3b5129" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <!-- Sol de Linha Fina -->
-                            <circle cx="130" cy="70" r="15" stroke="#e75d0b" stroke-width="1.2"
-                                stroke-dasharray="4 2" />
-                            <!-- Ponto Focal Dourado -->
+                    <!-- ILUSTRAÇÕES DINÂMICAS -->
+                    <div class="w-full h-56 relative flex items-center justify-center overflow-hidden" id="visual-illustration-container">
+                        <!-- 1. Default -->
+                        <svg id="svg-default" class="absolute inset-0 w-full h-full transition-all duration-700 ease-out opacity-100 scale-100" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="fine-line-path" d="M 20,150 C 40,110 60,110 80,140 C 100,170 120,130 140,100 C 160,70 140,40 120,60 C 100,80 80,60 60,90 C 40,120 80,160 180,140" stroke="#3b5129" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="130" cy="70" r="15" stroke="#e75d0b" stroke-width="1.2" stroke-dasharray="4 2" />
                             <circle cx="65" cy="90" r="4" fill="#fdb244" />
                         </svg>
 
-                        <!-- 2. Coqueiros / Maresia & Brisa (Linha Fina Animada) -->
-                        <svg id="svg-coqueiro"
-                            class="absolute inset-0 w-full h-full transition-all duration-700 ease-out opacity-0 scale-90 pointer-events-none"
-                            viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Linhas Contínuas de Ondas Fluindo -->
+                        <!-- 2. Coqueiros -->
+                        <svg id="svg-coqueiro" class="absolute inset-0 w-full h-full transition-all duration-700 ease-out opacity-0 scale-90 pointer-events-none" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g class="marine-wave">
-                                <path d="M 15,155 C 45,145 75,165 105,155 C 135,145 165,165 185,155" stroke="#55aaf2"
-                                    stroke-width="1.5" stroke-linecap="round" />
-                                <path d="M 25,168 C 55,158 85,178 115,168 C 145,158 175,178 185,168" stroke="#55aaf2"
-                                    stroke-width="1" stroke-linecap="round" opacity="0.5" />
+                                <path d="M 15,155 C 45,145 75,165 105,155 C 135,145 165,165 185,155" stroke="#55aaf2" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M 25,168 C 55,158 85,178 115,168 C 145,158 175,178 185,168" stroke="#55aaf2" stroke-width="1" stroke-linecap="round" opacity="0.5" />
                             </g>
-                            <!-- Coqueiro em Linha Fina Balançando -->
                             <g class="palm-sway">
-                                <!-- Tronco de Linha Única -->
-                                <path d="M 100,150 C 95,120 105,90 120,60" stroke="#3b5129" stroke-width="1.8"
-                                    stroke-linecap="round" />
-                                <!-- Folhas Finas Estilizadas -->
-                                <path d="M 120,60 Q 95,50 80,65" stroke="#3b5129" stroke-width="1.2"
-                                    stroke-linecap="round" />
-                                <path d="M 120,60 Q 105,40 100,20" stroke="#3b5129" stroke-width="1.2"
-                                    stroke-linecap="round" />
-                                <path d="M 120,60 Q 135,45 155,50" stroke="#3b5129" stroke-width="1.2"
-                                    stroke-linecap="round" />
-                                <path d="M 120,60 Q 140,70 145,90" stroke="#3b5129" stroke-width="1.2"
-                                    stroke-linecap="round" />
-                                <path d="M 120,60 Q 110,75 95,85" stroke="#3b5129" stroke-width="1.2"
-                                    stroke-linecap="round" />
+                                <path d="M 100,150 C 95,120 105,90 120,60" stroke="#3b5129" stroke-width="1.8" stroke-linecap="round" />
+                                <path d="M 120,60 Q 95,50 80,65" stroke="#3b5129" stroke-width="1.2" stroke-linecap="round" />
+                                <path d="M 120,60 Q 105,40 100,20" stroke="#3b5129" stroke-width="1.2" stroke-linecap="round" />
+                                <path d="M 120,60 Q 135,45 155,50" stroke="#3b5129" stroke-width="1.2" stroke-linecap="round" />
+                                <path d="M 120,60 Q 140,70 145,90" stroke="#3b5129" stroke-width="1.2" stroke-linecap="round" />
+                                <path d="M 120,60 Q 110,75 95,85" stroke="#3b5129" stroke-width="1.2" stroke-linecap="round" />
                             </g>
-                            <!-- Sol Poente em Linha Fina -->
-                            <path d="M 135,35 A 12,12 0 0,0 159,35" stroke="#fdb244" stroke-width="1.5"
-                                stroke-linecap="round" />
+                            <path d="M 135,35 A 12,12 0 0,0 159,35" stroke="#fdb244" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
 
-                        <!-- 3. Drink na Praia (Líquido Contido e Responsivo ao Hover) -->
-                        <svg id="svg-drink"
-                            class="absolute inset-0 w-full h-full transition-all duration-700 ease-out opacity-0 scale-90 pointer-events-none"
-                            viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Taça de Cocktail de Traço Contínuo -->
-                            <path d="M 50,60 H 150 L 110,130 V 165 H 130 H 70 H 90 V 130 Z" stroke="#3b5129"
-                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-
-                            <!-- CLIP PATH com o formato da taça interna para que NUNCA transborde -->
+                        <!-- 3. Drink -->
+                        <svg id="svg-drink" class="absolute inset-0 w-full h-full transition-all duration-700 ease-out opacity-0 scale-90 pointer-events-none" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 50,60 H 150 L 110,130 V 165 H 130 H 70 H 90 V 130 Z" stroke="#3b5129" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             <defs>
                                 <clipPath id="drink-liquid-clip">
                                     <path d="M 52,62 L 148,62 L 110,130 Z" />
                                 </clipPath>
                             </defs>
-
-                            <!-- Líquido que balança no Hover sem sair das paredes do copo -->
                             <g clip-path="url(#drink-liquid-clip)">
                                 <g class="drink-liquid">
-                                    <!-- Água / Suco cítrico de alta costura -->
                                     <rect x="30" y="70" width="140" height="70" fill="#e75d0b" opacity="0.15" />
-                                    <path d="M 30,78 Q 70,72 110,78 T 170,78 L 170,140 L 30,140 Z" fill="#e75d0b"
-                                        opacity="0.3" />
-                                    <!-- Rodela de Limão Flutuando -->
-                                    <circle cx="120" cy="85" r="15" stroke="#fdb244" stroke-width="1"
-                                        stroke-dasharray="3 3" />
+                                    <path d="M 30,78 Q 70,72 110,78 T 170,78 L 170,140 L 30,140 Z" fill="#e75d0b" opacity="0.3" />
+                                    <circle cx="120" cy="85" r="15" stroke="#fdb244" stroke-width="1" stroke-dasharray="3 3" />
                                     <circle cx="120" cy="85" r="12" stroke="#fdb244" stroke-width="0.8" />
                                 </g>
                             </g>
-
-                            <!-- Bolhas que flutuam em Linha Fina -->
                             <circle cx="95" cy="70" r="3" stroke="#55aaf2" stroke-width="1" />
                             <circle cx="108" cy="98" r="4" stroke="#55aaf2" stroke-width="1" opacity="0.6" />
                         </svg>
 
-                        <!-- 4. Feijoada / Sabor de Herança (Ingredientes Dentro da Panela) -->
-                        <svg id="svg-feijoada"
-                            class="absolute inset-0 w-full h-full transition-all duration-700 ease-out opacity-0 scale-90 pointer-events-none"
-                            viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Panela de Barro Tradicional em Linha Fina -->
-                            <path d="M 40,105 C 40,165 160,165 160,105 H 32 H 168" stroke="#3b5129" stroke-width="1.8"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <!-- Alças Finas -->
+                        <!-- 4. Feijoada -->
+                        <svg id="svg-feijoada" class="absolute inset-0 w-full h-full transition-all duration-700 ease-out opacity-0 scale-90 pointer-events-none" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 40,105 C 40,165 160,165 160,105 H 32 H 168" stroke="#3b5129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M 40,115 C 28,115 28,130 40,130" stroke="#3b5129" stroke-width="1.5" fill="none" />
-                            <path d="M 160,115 C 172,115 172,130 160,130" stroke="#3b5129" stroke-width="1.5"
-                                fill="none" />
-
-                            <!-- INGREDIENTES REAIS emergindo estritamente de dentro da boca da panela -->
+                            <path d="M 160,115 C 172,115 172,130 160,130" stroke="#3b5129" stroke-width="1.5" fill="none" />
                             <g clip-path="url(#panela-mouth-clip)">
-                                <!-- Fatia de Paio 1 -->
                                 <g class="feijoada-meat-1" transform="translate(65, 80)">
                                     <circle cx="0" cy="0" r="10" stroke="#e75d0b" stroke-width="1.2" />
-                                    <circle cx="0" cy="0" r="6" stroke="#500500" stroke-width="0.8"
-                                        stroke-dasharray="2 1" />
+                                    <circle cx="0" cy="0" r="6" stroke="#500500" stroke-width="0.8" stroke-dasharray="2 1" />
                                 </g>
-                                <!-- Carne Seca 2 -->
                                 <g class="feijoada-meat-2" transform="translate(130, 85)">
-                                    <rect x="-8" y="-8" width="16" height="16" rx="3" stroke="#500500"
-                                        stroke-width="1.2" />
+                                    <rect x="-8" y="-8" width="16" height="16" rx="3" stroke="#500500" stroke-width="1.2" />
                                     <path d="M -4,-4 L 4,4" stroke="#500500" stroke-width="0.8" />
                                 </g>
-                                <!-- Folha de Louro -->
                                 <g class="feijoada-leaf" transform="translate(100, 75)">
-                                    <path d="M -15,0 C -5,-10 5,-10 15,0 C 5,10 -5,10 -15,0 Z" stroke="#3b5129"
-                                        stroke-width="1.2" />
+                                    <path d="M -15,0 C -5,-10 5,-10 15,0 C 5,10 -5,10 -15,0 Z" stroke="#3b5129" stroke-width="1.2" />
                                     <path d="M -15,0 H 15" stroke="#3b5129" stroke-width="0.8" opacity="0.5" />
                                 </g>
                             </g>
-
-                            <!-- Colher de Madeira em Linha Fina mexendo -->
                             <g class="spoon-stir">
-                                <path d="M 98,50 L 102,110 C 100,118 90,118 88,110 Z" stroke="#fdb244"
-                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M 98,50 L 102,110 C 100,118 90,118 88,110 Z" stroke="#fdb244" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </g>
-
-                            <!-- Clip path para garantir que carnes não flutuem fora da boca da panela -->
                             <defs>
                                 <clipPath id="panela-mouth-clip">
                                     <rect x="30" y="55" width="140" height="70" />
@@ -320,40 +297,23 @@
                             </defs>
                         </svg>
 
-                        <!-- 5. Café / Conversa & Cafezinho (Fumaça Reativa com Filtro Premium de Desfoque) -->
-                        <svg id="svg-cafe"
-                            class="absolute inset-0 w-full h-full transition-all duration-700 ease-out opacity-0 scale-90 pointer-events-none"
-                            viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Pires de Linha Fina -->
+                        <!-- 5. Café -->
+                        <svg id="svg-cafe" class="absolute inset-0 w-full h-full transition-all duration-700 ease-out opacity-0 scale-90 pointer-events-none" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <ellipse cx="100" cy="140" rx="50" ry="8" stroke="#3b5129" stroke-width="1.5" />
-                            <!-- Corpo da Xícara de Traço Único -->
-                            <path d="M 60,95 L 140,95 C 135,130 65,130 60,95 Z" stroke="#3b5129" stroke-width="1.8"
-                                stroke-linejoin="round" />
-                            <!-- Asa da Xícara -->
+                            <path d="M 60,95 L 140,95 C 135,130 65,130 60,95 Z" stroke="#3b5129" stroke-width="1.8" stroke-linejoin="round" />
                             <path d="M 140,102 C 155,102 155,118 140,120" stroke="#3b5129" stroke-width="1.5" />
-                            <!-- Linha interna de café quente -->
                             <path d="M 62,99 C 80,102 120,102 138,99" stroke="#fdb244" stroke-width="1.2" />
-
-                            <!-- FUMAÇA ELEGANTE EM LINHA FINA (Com filtro de desfoque suave) -->
                             <g transform="translate(100, 85)" id="coffee-steam-group" class="theme-transition">
-                                <path class="coffee-smoke-line smoke-1"
-                                    d="M -12,0 C -22,-15 -2,-30 -12,-45 C -22,-60 -2,-75 -12,-90" stroke="#e75d0b"
-                                    stroke-width="1.5" stroke-linecap="round" filter="url(#smoke-blur-filter)" />
-                                <path class="coffee-smoke-line smoke-2"
-                                    d="M 0,5 C -8,-10 8,-25 0,-40 C -8,-55 8,-70 0,-85" stroke="#e75d0b"
-                                    stroke-width="2" stroke-linecap="round" filter="url(#smoke-blur-filter)" />
-                                <path class="coffee-smoke-line smoke-3"
-                                    d="M 12,0 C 2,-15 22,-30 12,-45 C 2,-60 22,-75 12,-90" stroke="#e75d0b"
-                                    stroke-width="1.5" stroke-linecap="round" filter="url(#smoke-blur-filter)" />
+                                <path class="coffee-smoke-line smoke-1" d="M -12,0 C -22,-15 -2,-30 -12,-45 C -22,-60 -2,-75 -12,-90" stroke="#e75d0b" stroke-width="1.5" stroke-linecap="round" filter="url(#smoke-blur-filter)" />
+                                <path class="coffee-smoke-line smoke-2" d="M 0,5 C -8,-10 8,-25 0,-40 C -8,-55 8,-70 0,-85" stroke="#e75d0b" stroke-width="2" stroke-linecap="round" filter="url(#smoke-blur-filter)" />
+                                <path class="coffee-smoke-line smoke-3" d="M 12,0 C 2,-15 22,-30 12,-45 C 2,-60 22,-75 12,-90" stroke="#e75d0b" stroke-width="1.5" stroke-linecap="round" filter="url(#smoke-blur-filter)" />
                             </g>
-
                             <defs>
                                 <filter id="smoke-blur-filter" x="-30%" y="-30%" width="160%" height="160%">
                                     <feGaussianBlur stdDeviation="1.2" />
                                 </filter>
                             </defs>
                         </svg>
-
                     </div>
 
                     <div class="text-xs text-stone-600 space-y-1 z-10 theme-transition" id="visual-footer-text">
@@ -362,19 +322,10 @@
                     </div>
                 </div>
             </div>
-
-        </div>
-
-        <!-- Barra inferior sutil de rolagem -->
-        <div class="absolute bottom-6 left-6 md:left-20 flex items-center gap-3">
-            <span class="w-2 h-2 rounded-full bg-vibrantOrange animate-bounce"></span>
-            <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-forestGreen theme-transition"
-                id="scroll-text">Role para desbravar</span>
         </div>
     </section>
 
-
-    <!-- BLOCO 1: O MANIFESTO (QUEM SOMOS) -->
+    <!-- BLOCO 1: O MANIFESTO (Nossa Raiz) -->
     <section id="sobre"
         class="py-24 md:py-36 px-6 md:px-12 lg:px-20 bg-forestGreen text-creamWhite relative overflow-hidden theme-transition reveal-element">
         <!-- Grafismo de Fundo -->
@@ -389,11 +340,10 @@
                 class="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-creamWhite/15 pb-8 mb-16">
                 <div>
                     <span class="text-xs uppercase tracking-[0.3em] text-warmGold font-bold">O Manifesto</span>
-                    <h2 class="text-4xl md:text-6xl font-tangarland font-black tracking-tight mt-2 text-creamWhite">Quem
-                        Somos</h2>
+                    <h2 class="text-4xl md:text-6xl font-tangarland font-black tracking-tight mt-2 text-creamWhite">Nossa raiz</h2>
                 </div>
                 <p class="text-xs uppercase tracking-[0.2em] text-skyBlue font-bold mt-4 md:mt-0">
-                    SABOR E PRECISÃO COMERCIAL
+                    Estratégia com sotaque brasileiro
                 </p>
             </div>
 
@@ -401,12 +351,10 @@
                 <!-- Coluna de Esquerda: Frase Crucial de Impacto -->
                 <div class="lg:col-span-5">
                     <h3 class="text-3xl md:text-5xl font-tangarland font-light leading-tight">
-                        "A marca sem vender é <span class="text-vibrantOrange font-bold italic">projeto de arte</span>,
-                        e vender por vender não dura no mercado."
+                        "A Borogodó nasceu da vontade de construir marcas que <span class="text-vibrantOrange font-bold italic">permanecem</span>, não apenas aparecem."
                     </h3>
                     <p class="mt-8 text-creamWhite/80 max-w-sm editable-field" id="txt-sobre-desc">
-                        É esse equilíbrio cirúrgico e elegante entre estética magnética e vendas sólidas que chamamos de
-                        Borogodó.
+                        Não acreditamos em branding de prateleira. Cada marca carrega uma história, um contexto e um jeito único de ocupar espaço no mundo.
                     </p>
                 </div>
 
@@ -414,7 +362,7 @@
                 <div
                     class="lg:col-span-7 space-y-6 text-base md:text-lg text-creamWhite/85 leading-relaxed font-canvasans">
                     <p class="text-xl text-creamWhite font-semibold editable-field" id="txt-sobre-main">
-                        A Borogodó nasce da experiência de quem viu que escolher entre vender e criar, fracassa.
+                        Por isso começamos pela estratégia, não pela estética. Antes de desenhar uma identidade, entendemos quem você é, o que faz sua marca diferente e como ela pode ser lembrada. Porque design sem significado envelhece. Marcas com raiz permanecem.
                     </p>
 
                     <!-- SISTEMA DE ABAS DO MANIFESTO (Vibrante e Interativo) -->
@@ -424,16 +372,13 @@
                             class="border-b border-creamWhite/15 py-4 cursor-pointer group hover:border-vibrantOrange transition-colors">
                             <div class="flex justify-between items-center">
                                 <span
-                                    class="text-base font-bold text-creamWhite group-hover:text-vibrantOrange transition-colors">A
-                                    Nossa Origem</span>
+                                    class="text-base font-bold text-creamWhite group-hover:text-vibrantOrange transition-colors">+ Nossa raiz</span>
                                 <i id="manifesto-1-icon"
                                     class="fa-solid fa-plus text-xs text-vibrantOrange transition-transform duration-300"></i>
                             </div>
                             <div id="manifesto-1"
                                 class="hidden mt-3 text-sm text-creamWhite/70 leading-relaxed pr-6 editable-field">
-                                Vivemos no ponto de encontro dos dois lados da moeda. Somos uma equipe que vem de
-                                diferentes cantos do Brasil, carregando o sotaque, a cultura, as regionalidades e a
-                                inteligência de quem cria e se comunica para pessoas de verdade.
+                                A Borogodó nasceu da vontade de construir marcas que permanecem, não apenas aparecem. Acreditamos que branding começa na clareza de quem uma marca é, no que ela acredita e no que ela deseja ocupar.
                             </div>
                         </div>
 
@@ -442,16 +387,13 @@
                             class="border-b border-creamWhite/15 py-4 cursor-pointer group hover:border-vibrantOrange transition-colors">
                             <div class="flex justify-between items-center">
                                 <span
-                                    class="text-base font-bold text-creamWhite group-hover:text-vibrantOrange transition-colors">Como
-                                    enxergamos a Saturação</span>
+                                    class="text-base font-bold text-creamWhite group-hover:text-vibrantOrange transition-colors">+ Qual problema enxergamos</span>
                                 <i id="manifesto-2-icon"
                                     class="fa-solid fa-plus text-xs text-vibrantOrange transition-transform duration-300"></i>
                             </div>
                             <div id="manifesto-2"
                                 class="hidden mt-3 text-sm text-creamWhite/70 leading-relaxed pr-6 editable-field">
-                                Onde você vê um mercado saturado, nós enxergamos a ausência de um posicionamento focado
-                                no diferencial verdadeiro da marca. Ninguém copia a alma, e o "borogodó" de uma marca é
-                                seu maior ativo de defesa.
+                                Nunca foi tão fácil criar uma marca, nunca foi tão difícil ser lembrado. Em um mercado onde quase todo mundo parece igual, quem tenta falar com todo mundo acaba não sendo lembrado por ninguém. O problema raramente é a concorrência, é a falta de identidade.
                             </div>
                         </div>
 
@@ -460,73 +402,50 @@
                             class="border-b border-creamWhite/15 py-4 cursor-pointer group hover:border-vibrantOrange transition-colors">
                             <div class="flex justify-between items-center">
                                 <span
-                                    class="text-base font-bold text-creamWhite group-hover:text-vibrantOrange transition-colors">Vendas
-                                    em queda sem justificativa?</span>
+                                    class="text-base font-bold text-creamWhite group-hover:text-vibrantOrange transition-colors">+ Como isso afeta o cliente</span>
                                 <i id="manifesto-3-icon"
                                     class="fa-solid fa-plus text-xs text-vibrantOrange transition-transform duration-300"></i>
                             </div>
                             <div id="manifesto-3"
                                 class="hidden mt-3 text-sm text-creamWhite/70 leading-relaxed pr-6 editable-field">
-                                Quase sempre o problema está na fragilidade das pontes. Nós não apenas estruturamos um
-                                funil, nós criamos ecossistemas culturais onde as marcas ganham relevância orgânica e
-                                formam tribos fiéis.
+                                Quando uma marca não comunica seu valor, ela começa a disputar preço em vez de percepção. Vender fica mais difícil, a diferencição desaparece e crescer exige cada vez mais esforço.
                             </div>
                         </div>
                     </div>
 
                     <div class="pt-6 font-tangarland text-2xl text-warmGold italic editable-field" id="txt-sobre-quote">
-                        "A sua dor é a nossa dor. A sua história é a nossa história. <br />
-                        Então... por que não crescer juntos?"
+                        "A Borogodó nasceu da vontade de construir marcas que permanecem, não apenas aparecem."
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- MARCAS PARCEIRAS (BLOCO 2 - Baixo contraste, refinado) -->
+    <!-- MARCAS PARCEIRAS (LOGOS DINÂMICAS) -->
     <section class="py-16 bg-creamWhite border-b border-forestGreen/10 relative z-10 theme-transition reveal-element"
         id="marcas-section">
         <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
             <p class="text-center text-[10px] uppercase tracking-[0.3em] text-forestGreen font-bold mb-12 theme-transition"
                 id="marcas-tag">
-                Nossa bagagem e experiência corporativa inclui grandes marcas globais e nacionais:
+                Marcas que já passaram pela nossa mesa.
             </p>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-65 hover:opacity-100 transition-opacity duration-500"
+            <div class="flex flex-wrap gap-8 items-center justify-center opacity-65 hover:opacity-100 transition-opacity duration-500"
                 id="marcas-logos">
-                <span
-                    class="font-tangarland font-extrabold text-2xl text-forestGreen theme-transition interactive-target">IKEA</span>
-                <span
-                    class="font-canvasans font-bold text-xl text-forestGreen theme-transition interactive-target">Scotiabank</span>
-                <span
-                    class="font-canvasans font-black text-2xl tracking-wide italic text-forestGreen theme-transition interactive-target">DECATHLON</span>
-                <span
-                    class="font-canvasans font-light text-2xl tracking-widest text-forestGreen theme-transition interactive-target">WESTJET</span>
-                <span
-                    class="font-tangarland font-bold text-2xl text-forestGreen theme-transition interactive-target">Uber</span>
-                <span
-                    class="font-tangarland font-black text-3xl text-forestGreen theme-transition interactive-target">A&W</span>
-                <span
-                    class="font-canvasans font-semibold text-lg tracking-widest text-forestGreen theme-transition interactive-target">TELUS</span>
-                <span
-                    class="font-tangarland text-2xl italic font-bold text-forestGreen theme-transition interactive-target">Molson</span>
-                <span
-                    class="font-canvasans font-black text-2xl text-forestGreen theme-transition interactive-target">Coors
-                    LIGHT</span>
-                <span
-                    class="font-canvasans font-semibold text-xl text-forestGreen theme-transition interactive-target">Tangerine</span>
-                <span
-                    class="font-tangarland font-bold text-2xl text-forestGreen theme-transition interactive-target">MAPLE
-                    LEAF</span>
-                <span
-                    class="font-canvasans font-bold text-xl text-forestGreen theme-transition interactive-target">ROX</span>
+                <span class="font-canvasans font-semibold text-lg tracking-widest text-forestGreen theme-transition interactive-target">Bandeirante Magazine</span>
+                <span class="font-canvasans font-semibold text-lg tracking-widest text-forestGreen theme-transition interactive-target">Orion Stellar</span>
+                <span class="font-canvasans font-semibold text-lg tracking-widest text-forestGreen theme-transition interactive-target">Rosie I Adore You</span>
+                <span class="font-canvasans font-semibold text-lg tracking-widest text-forestGreen theme-transition interactive-target">Casa do Construtor</span>
+                <span class="font-canvasans font-semibold text-lg tracking-widest text-forestGreen theme-transition interactive-target">Mansão Maromba</span>
+                <span class="font-canvasans font-semibold text-lg tracking-widest text-forestGreen theme-transition interactive-target">Casa Bauducco</span>
+                <span class="font-canvasans font-semibold text-lg tracking-widest text-forestGreen theme-transition interactive-target">Democrata</span>
+                <span class="font-canvasans font-semibold text-lg tracking-widest text-forestGreen theme-transition interactive-target">Hectare</span>
+                <span class="font-canvasans font-semibold text-lg tracking-widest text-forestGreen theme-transition interactive-target">Cheirin Bão</span>
             </div>
         </div>
     </section>
 
-
-    <!-- BLOCO 3: SERVIÇOS (O QUE FAZEMOS) -->
+    <!-- BLOCO 3: SERVIÇOS (Nosso Gingado) -->
     <section id="servicos"
         class="py-24 md:py-36 px-6 md:px-12 lg:px-20 bg-creamWhite relative overflow-hidden theme-transition reveal-element">
         <div class="max-w-7xl mx-auto">
@@ -537,47 +456,48 @@
                         Ferramentas</span>
                     <h2 class="text-4xl md:text-7xl font-tangarland font-black tracking-tight leading-none text-forestGreen theme-transition"
                         id="services-title">
-                        O Que Fazemos <br />
+                        Nosso Gingado <br />
                         <span class="italic font-light text-vibrantOrange">Pelo Seu Legado</span>
                     </h2>
                 </div>
                 <p class="text-sm text-stone-600 max-w-sm mt-4 md:mt-0 font-canvasans">
-                    Metodologia proprietária focada em alta performance criativa e inteligência de negócios brasileira.
+                    Um método próprio para transformar boas ideias em marcas memoráveis.
                 </p>
             </div>
 
             <!-- Grid de Cards de Serviços -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8" id="services-grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="services-grid">
 
-                <!-- CARD 1 -->
-                <div class="bg-white border-2 border-forestGreen/10 p-8 md:p-12 rounded-[2.5rem] flex flex-col justify-between min-h-[460px] hover:border-vibrantOrange hover:shadow-2xl transition-all duration-300 group relative overflow-hidden"
+                <!-- CARD 1: Estratégia -->
+                <div class="bg-white border-2 border-forestGreen/10 p-6 rounded-[2.5rem] flex flex-col justify-between min-h-[460px] hover:border-vibrantOrange hover:shadow-2xl transition-all duration-300 group relative overflow-hidden"
                     id="service-card-1">
-                    <div class="space-y-8 relative z-10">
+                    <div class="space-y-6 relative z-10">
                         <div class="flex justify-between items-start">
                             <div
                                 class="w-12 h-12 rounded-full bg-forestGreen text-creamWhite flex items-center justify-center">
                                 <i class="fa-solid fa-compass text-lg"></i>
                             </div>
                             <span
-                                class="text-[10px] font-bold uppercase tracking-widest text-forestGreen bg-forestGreen/10 px-3 py-1 rounded-full font-canvasans">01
+                                class="text-[9px] font-bold uppercase tracking-widest text-forestGreen bg-forestGreen/10 px-3 py-1 rounded-full font-canvasans">01
                                 / Estratégia</span>
                         </div>
 
-                        <h3 class="text-2xl md:text-3xl font-tangarland font-bold text-forestGreen group-hover:text-vibrantOrange transition-colors editable-field"
+                        <h3 class="text-xl font-tangarland font-bold text-forestGreen group-hover:text-vibrantOrange transition-colors editable-field"
                             id="txt-srv-1-title">
-                            Branding & Business Strategy
+                            Branding & Posicionamento
                         </h3>
-                        <p class="text-sm text-stone-600 leading-relaxed font-canvasans editable-field"
+                        <p class="text-xs text-stone-600 leading-relaxed font-canvasans editable-field"
                             id="txt-srv-1-desc">
-                            Através de uma estratégia alinhada aos objetivos de negócios, ajudamos organizações a se
-                            diferenciarem dentro de seus propósitos. Moldamos marcas que conversam no novo contexto
-                            social.
+                            Toda marca precisa de uma direção antes de ganhar forma.
                         </p>
+                        <div class="text-[9px] font-bold text-stone-400 font-canvasans uppercase tracking-wider">
+                            Diagnóstico • Posicionamento • Arquitetura • Naming • Pesquisa
+                        </div>
                     </div>
 
-                    <div class="pt-8 border-t border-stone-100 flex justify-between items-center mt-8 relative z-10">
+                    <div class="pt-6 border-t border-stone-100 flex justify-between items-center mt-6 relative z-10">
                         <button
-                            onclick="openServiceModal('Branding & Business Strategy', 'Desenhamos a espinha dorsal de marcas duradouras. Isso envolve: pesquisas aprofundadas de mercado, análise competitiva, posicionamento de nicho, definição de proposta de valor clara, tom de voz e uma arquitetura de portfólio sólida para crescimento empresarial.')"
+                            onclick="openServiceModal('Branding & Posicionamento', 'Toda marca precisa de um ponto de partida. Antes de pensar em identidade visual ou comunicação, investigamos a essência do negócio, o mercado, o público e o cenário competitivo. A partir desse diagnóstico, construímos posicionamento, arquitetura de marca, naming e uma estratégia capaz de orientar todas as próximas decisões.')"
                             class="text-xs font-bold uppercase tracking-widest text-forestGreen hover:text-vibrantOrange transition-colors font-canvasans interactive-target">
                             Explorar Detalhes —
                         </button>
@@ -588,35 +508,36 @@
                     </div>
                 </div>
 
-                <!-- CARD 2 -->
-                <div class="bg-white border-2 border-forestGreen/10 p-8 md:p-12 rounded-[2.5rem] flex flex-col justify-between min-h-[460px] hover:border-vibrantOrange hover:shadow-2xl transition-all duration-300 group relative overflow-hidden"
+                <!-- CARD 2: Identidade -->
+                <div class="bg-white border-2 border-forestGreen/10 p-6 rounded-[2.5rem] flex flex-col justify-between min-h-[460px] hover:border-vibrantOrange hover:shadow-2xl transition-all duration-300 group relative overflow-hidden"
                     id="service-card-2">
-                    <div class="space-y-8 relative z-10">
+                    <div class="space-y-6 relative z-10">
                         <div class="flex justify-between items-start">
                             <div
                                 class="w-12 h-12 rounded-full bg-vibrantOrange text-creamWhite flex items-center justify-center">
-                                <i class="fa-solid fa-chart-line text-lg"></i>
+                                <i class="fa-solid fa-paintbrush text-lg"></i>
                             </div>
                             <span
-                                class="text-[10px] font-bold uppercase tracking-widest text-vibrantOrange bg-vibrantOrange/10 px-3 py-1 rounded-full font-canvasans">02
-                                / Performance</span>
+                                class="text-[9px] font-bold uppercase tracking-widest text-vibrantOrange bg-vibrantOrange/10 px-3 py-1 rounded-full font-canvasans">02
+                                / Identidade</span>
                         </div>
 
-                        <h3 class="text-2xl md:text-3xl font-tangarland font-bold text-forestGreen group-hover:text-vibrantOrange transition-colors editable-field"
+                        <h3 class="text-xl font-tangarland font-bold text-forestGreen group-hover:text-vibrantOrange transition-colors editable-field"
                             id="txt-srv-2-title">
-                            Data, Growth & Campaigns
+                            Verbal & Visual
                         </h3>
-                        <p class="text-sm text-stone-600 leading-relaxed font-canvasans editable-field"
+                        <p class="text-xs text-stone-600 leading-relaxed font-canvasans editable-field"
                             id="txt-srv-2-desc">
-                            Vendas, e-commerce, geração de leads, buzz, alcance, awareness, lançamento... não importa a
-                            finalidade, fazemos mensagens serem ouvidas e produtos serem vendidos. Sempre com olhar
-                            atento para performance e inteligência de dados.
+                            Transformamos estratégia em uma identidade que faz sentido antes de chamar atenção.
                         </p>
+                        <div class="text-[9px] font-bold text-stone-400 font-canvasans uppercase tracking-wider">
+                            Identidade Visual • Identidade Verbal • Tom de Voz • Manual • Papelaria
+                        </div>
                     </div>
 
-                    <div class="pt-8 border-t border-stone-100 flex justify-between items-center mt-8 relative z-10">
+                    <div class="pt-6 border-t border-stone-100 flex justify-between items-center mt-6 relative z-10">
                         <button
-                            onclick="openServiceModal('Data, Growth & Campaigns', 'Criamos ecossistemas integrados de conversão: campanhas focadas em tráfego de alta conversão, e-commerce growth hacking, captação qualificada de leads, análise profunda de comportamento de dados (BI) e inteligência analítica para otimização em tempo real.')"
+                            onclick="openServiceModal('Verbal & Visual', 'Uma identidade vai muito além de um logotipo. Criamos sistemas visuais e verbais que traduzem a personalidade da marca e garantem consistência em cada ponto de contato. Porque quando estratégia e estética caminham juntas, reconhecimento deixa de ser coincidência.')"
                             class="text-xs font-bold uppercase tracking-widest text-forestGreen hover:text-vibrantOrange transition-colors font-canvasans interactive-target">
                             Explorar Detalhes —
                         </button>
@@ -627,35 +548,76 @@
                     </div>
                 </div>
 
-                <!-- CARD 3 -->
-                <div class="bg-white border-2 border-forestGreen/10 p-8 md:p-12 rounded-[2.5rem] flex flex-col justify-between min-h-[460px] hover:border-vibrantOrange hover:shadow-2xl transition-all duration-300 group relative overflow-hidden"
+                <!-- CARD 3: Comunicação -->
+                <div class="bg-white border-2 border-forestGreen/10 p-6 rounded-[2.5rem] flex flex-col justify-between min-h-[460px] hover:border-vibrantOrange hover:shadow-2xl transition-all duration-300 group relative overflow-hidden"
                     id="service-card-3">
-                    <div class="space-y-8 relative z-10">
+                    <div class="space-y-6 relative z-10">
                         <div class="flex justify-between items-start">
                             <div
                                 class="w-12 h-12 rounded-full bg-skyBlue text-creamWhite flex items-center justify-center">
-                                <i class="fa-solid fa-users text-lg"></i>
+                                <i class="fa-solid fa-bullhorn text-lg"></i>
                             </div>
                             <span
-                                class="text-[10px] font-bold uppercase tracking-widest text-skyBlue bg-skyBlue/10 px-3 py-1 rounded-full font-canvasans">03
-                                / Conexão</span>
+                                class="text-[9px] font-bold uppercase tracking-widest text-skyBlue bg-skyBlue/10 px-3 py-1 rounded-full font-canvasans">03
+                                / Comunicação</span>
                         </div>
 
-                        <h3 class="text-2xl md:text-3xl font-tangarland font-bold text-forestGreen group-hover:text-vibrantOrange transition-colors editable-field"
+                        <h3 class="text-xl font-tangarland font-bold text-forestGreen group-hover:text-vibrantOrange transition-colors editable-field"
                             id="txt-srv-3-title">
-                            CRM, PR, Content & Social
+                            Conteúdo & Presença
                         </h3>
-                        <p class="text-sm text-stone-600 leading-relaxed font-canvasans editable-field"
+                        <p class="text-xs text-stone-600 leading-relaxed font-canvasans editable-field"
                             id="txt-srv-3-desc">
-                            Construímos autoridade genuína para as marcas e transformamos simples seguidores em
-                            defensores fervorosos da marca. Do inbound marketing ao live social e assessoria,
-                            estruturamos uma plataforma de conteúdo completa.
+                            A comunicação certa faz a marca ocupar espaço na memória, não apenas no feed.
                         </p>
+                        <div class="text-[9px] font-bold text-stone-400 font-canvasans uppercase tracking-wider">
+                            Social Media • Planejamento • Direção Criativa • Campanhas • Lançamentos
+                        </div>
                     </div>
 
-                    <div class="pt-8 border-t border-stone-100 flex justify-between items-center mt-8 relative z-10">
+                    <div class="pt-6 border-t border-stone-100 flex justify-between items-center mt-6 relative z-10">
                         <button
-                            onclick="openServiceModal('CRM, PR, Content & Social Media', 'Estabelecemos conexão emocional real. Oferecemos governança e estratégia de CRM com fluxos inteligentes de e-mail marketing, assessoria de relações públicas corporativa para grande imprensa (PR), redação criativa de conteúdo de marca e gerenciamento focado em redes sociais.')"
+                            onclick="openServiceModal('Conteúdo & Presença', 'Toda comunicação deve reforçar aquilo que a marca acredita. Planejamos conteúdos, campanhas e estratégias que conectam posicionamento e percepção. Mais do que produzir peças, construímos narrativas capazes de fortalecer relações e gerar reconhecimento ao longo do tempo.')"
+                            class="text-xs font-bold uppercase tracking-widest text-forestGreen hover:text-vibrantOrange transition-colors font-canvasans interactive-target">
+                            Explorar Detalhes —
+                        </button>
+                        <span
+                            class="w-8 h-8 rounded-full bg-stone-100 flex items-center justify-center text-stone-400 group-hover:bg-vibrantOrange group-hover:text-creamWhite transition-all duration-300">
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- CARD 4: Aplicações -->
+                <div class="bg-white border-2 border-forestGreen/10 p-6 rounded-[2.5rem] flex flex-col justify-between min-h-[460px] hover:border-vibrantOrange hover:shadow-2xl transition-all duration-300 group relative overflow-hidden"
+                    id="service-card-4">
+                    <div class="space-y-6 relative z-10">
+                        <div class="flex justify-between items-start">
+                            <div
+                                class="w-12 h-12 rounded-full bg-warmGold text-forestGreen flex items-center justify-center">
+                                <i class="fa-solid fa-laptop-code text-lg"></i>
+                            </div>
+                            <span
+                                class="text-[9px] font-bold uppercase tracking-widest text-warmGold bg-warmGold/10 px-3 py-1 rounded-full font-canvasans">04
+                                / Aplicações</span>
+                        </div>
+
+                        <h3 class="text-xl font-tangarland font-bold text-forestGreen group-hover:text-vibrantOrange transition-colors editable-field"
+                            id="txt-srv-4-title">
+                            Digital & Experiência
+                        </h3>
+                        <p class="text-xs text-stone-600 leading-relaxed font-canvasans editable-field"
+                            id="txt-srv-4-desc">
+                            Levamos a marca para todos os lugares onde ela precisa ser vivida.
+                        </p>
+                        <div class="text-[9px] font-bold text-stone-400 font-canvasans uppercase tracking-wider">
+                            Landing Pages • Sites • Apresentações • Materiais Institucionais • Experiência de Marca
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t border-stone-100 flex justify-between items-center mt-6 relative z-10">
+                        <button
+                            onclick="openServiceModal('Digital & Experiência', 'É nas aplicações que a estratégia ganha vida. Desenvolvemos ambientes digitais, apresentações e materiais institucionais que transformam o posicionamento da marca em experiências consistentes. Cada detalhe é pensado para que a percepção seja tão forte quanto a estratégia que sustenta a marca.')"
                             class="text-xs font-bold uppercase tracking-widest text-forestGreen hover:text-vibrantOrange transition-colors font-canvasans interactive-target">
                             Explorar Detalhes —
                         </button>
@@ -671,7 +633,7 @@
     </section>
 
 
-    <!-- SEÇÃO SUBSTACK: DIÁRIOS DE BOROGODÓ -->
+    <!-- SEÇÃO SUBSTACK: REPERTÓRIO -->
     <section id="cronicas"
         class="py-24 md:py-36 px-6 md:px-12 lg:px-20 bg-[#fffbf4] border-t border-b border-forestGreen/10 relative z-10 theme-transition reveal-element">
         <div class="max-w-7xl mx-auto">
@@ -680,7 +642,7 @@
                     <span class="text-xs uppercase tracking-[0.3em] text-vibrantOrange font-bold block mb-4">Mente
                         Ativa</span>
                     <h2 class="text-4xl md:text-6xl font-tangarland font-black tracking-tight text-forestGreen">
-                        Diários de Borogodó
+                        Repertório
                     </h2>
                     <p class="text-stone-600 text-sm mt-2 font-canvasans">
                         Inscreva-se na nossa newsletter oficial para receber reflexões raras sobre marca e cultura.
@@ -708,7 +670,7 @@
                             estético e do diferencial cultural brasileiro.
                         </p>
                     </div>
-                    <div class="pt-6 border-t border-stone-50 flex justify-between items-center mt-6">
+                    <div class="pt-6 border-t border-stone-5 flex justify-between items-center mt-6">
                         <span class="text-[10px] text-stone-400 font-semibold font-canvasans">Tempo de Leitura: 5
                             min</span>
                         <a href="https://aborogodo.substack.com" target="_blank"
@@ -729,7 +691,7 @@
                             batalha do amanhã é quem carregar sotaque local.
                         </p>
                     </div>
-                    <div class="pt-6 border-t border-stone-50 flex justify-between items-center mt-6">
+                    <div class="pt-6 border-t border-stone-5 flex justify-between items-center mt-6">
                         <span class="text-[10px] text-stone-400 font-semibold font-canvasans">Tempo de Leitura: 7
                             min</span>
                         <a href="https://aborogodo.substack.com" target="_blank"
@@ -750,7 +712,7 @@
                             de marca sustentável enquanto vende diariamente.
                         </p>
                     </div>
-                    <div class="pt-6 border-t border-stone-50 flex justify-between items-center mt-6">
+                    <div class="pt-6 border-t border-stone-5 flex justify-between items-center mt-6">
                         <span class="text-[10px] text-stone-400 font-semibold font-canvasans">Tempo de Leitura: 6
                             min</span>
                         <a href="https://aborogodo.substack.com" target="_blank"
@@ -761,7 +723,7 @@
         </div>
     </section>
 
-    <!-- INTERSTICIAL DE CULTURA BRASILEIRA (Identidade Expressiva) -->
+    <!-- INTERSTICIAL DE CULTURA BRASILEIRA (O Legado Cultural) -->
     <section
         class="py-24 px-6 md:px-12 lg:px-20 bg-forestGreen text-creamWhite relative overflow-hidden theme-transition reveal-element"
         id="intersticial">
@@ -777,19 +739,17 @@
             </span>
             <h2 class="text-4xl md:text-6xl font-tangarland font-extrabold tracking-tight leading-tight italic text-warmGold editable-field"
                 id="txt-intersticial-title">
-                "Não nascemos para seguir regras importadas. Nascemos para ditar o ritmo."
+                Toda marca vende alguma coisa. Poucas conseguem fazer parte da vida das pessoas.
             </h2>
             <p class="text-creamWhite/80 text-lg md:text-xl font-canvasans leading-relaxed max-w-2xl mx-auto editable-field"
                 id="txt-intersticial-desc">
-                Trazemos a sofisticação da bossa, a inteligência das nossas raízes e o vigor de um Brasil contemporâneo
-                que sabe se posicionar. Nossas soluções de design e marcas são refinadas pela Orion para se ditar
-                globalmente.
+                É isso que acontece quando uma marca cria raízes. Ela deixa de disputar atenção e passa a ocupar um lugar na memória, nas conversas e na cultura. É esse tipo de marca que buscamos construir.
             </p>
         </div>
     </section>
 
 
-    <!-- BLOCO DE BRIEFING & CONTATO -->
+    <!-- BLOCO DE BRIEFING & CONTATO (Vamos Conversar) -->
     <section id="contato"
         class="py-24 md:py-36 px-6 md:px-12 lg:px-20 bg-creamWhite text-forestGreen relative overflow-hidden theme-transition reveal-element">
         <div class="max-w-7xl mx-auto">
@@ -801,14 +761,13 @@
                         Parceria</span>
                     <h2 class="text-4xl md:text-6xl font-tangarland font-black tracking-tight leading-none text-forestGreen theme-transition"
                         id="contact-title">
-                        Quer construir seu <br />
-                        <span class="italic text-vibrantOrange font-light">Legado de Marca</span>?
+                        Toda marca começa com uma história. <br />
+                        <span class="italic text-vibrantOrange font-light text-3xl md:text-5xl">A questão é se as pessoas vão lembrar dela.</span>
                     </h2>
 
                     <p class="text-stone-700 text-base md:text-lg leading-relaxed font-canvasans editable-field"
                         id="txt-contato-desc">
-                        Escreva para nossa equipe criativa. Gostamos de café de torra média, conversas corajosas sobre
-                        diferenciação de mercado e projetos audaciosos que geram impacto real.
+                        Vamos construir uma marca que permaneça?
                     </p>
 
                     <!-- Detalhes Físicos e Online de Contato -->
@@ -820,9 +779,8 @@
                             </span>
                             <div>
                                 <span class="text-[10px] text-stone-500 block uppercase font-bold tracking-wider">Email
-                                    Executivo</span>
-                                <span class="text-sm font-semibold font-canvasans text-forestGreen editable-field"
-                                    id="txt-email">contato@aborogodo.com.br</span>
+                                     Executivo</span>
+                                <a href="mailto:borogodoeco@gmail.com" class="text-sm font-semibold font-canvasans text-forestGreen editable-field interactive-target" id="txt-email">borogodoeco@gmail.com</a>
                             </div>
                         </div>
                         <div class="flex items-center gap-4">
@@ -834,20 +792,17 @@
                                 <span
                                     class="text-[10px] text-stone-500 block uppercase font-bold tracking-wider">WhatsApp
                                     & Call</span>
-                                <span class="text-sm font-semibold font-canvasans text-forestGreen editable-field"
-                                    id="txt-phone">+55 (41) 99207-1672</span>
+                                <a href="https://wa.me/5541992071672" target="_blank" class="text-sm font-semibold font-canvasans text-forestGreen editable-field interactive-target" id="txt-phone">+55 (41) 99207-1672</a>
                             </div>
                         </div>
                         <div class="flex items-center gap-4">
                             <span
                                 class="w-10 h-10 rounded-full bg-forestGreen text-creamWhite flex items-center justify-center">
-                                <i class="fa-solid fa-location-dot"></i>
+                                <i class="fa-brands fa-instagram"></i>
                             </span>
                             <div>
-                                <span class="text-[10px] text-stone-500 block uppercase font-bold tracking-wider">Base
-                                    de Operações</span>
-                                <span class="text-sm font-semibold font-canvasans text-forestGreen editable-field"
-                                    id="txt-location">Nosso Brasil inteiro</span>
+                                <span class="text-[10px] text-stone-500 block uppercase font-bold tracking-wider">Instagram</span>
+                                <a href="https://instagram.com/aborogodo" target="_blank" class="text-sm font-semibold font-canvasans text-forestGreen editable-field interactive-target" id="txt-instagram">@aborogodo</a>
                             </div>
                         </div>
                     </div>
@@ -885,7 +840,7 @@
                                 seu principal gargalo de marca?</label>
                             <select id="contact-challenge"
                                 class="w-full bg-creamWhite/50 border border-forestGreen/10 focus:border-vibrantOrange focus:bg-white outline-none py-3.5 px-4 rounded-xl transition-all text-sm text-forestGreen">
-                                <option>A marca precisa se diferenciar e rejuvenescer (Branding)</option>
+                                <option>A marca precisa se diferenciar e criar raízes (Branding)</option>
                                 <option>Temos produtos excelentes, mas vendas oscilantes (Performance)</option>
                                 <option>Queremos construir autoridade e presença na mídia (PR/Social)</option>
                                 <option>Outros desafios complexos</option>
@@ -903,7 +858,7 @@
 
                         <button type="submit" id="submit-btn"
                             class="w-full py-4 bg-forestGreen text-creamWhite hover:bg-vibrantOrange font-bold text-xs uppercase tracking-widest rounded-full transition-all duration-300 shadow-lg interactive-target">
-                            Enviar Briefing Corporativo <i class="fa-solid fa-paper-plane ml-2"></i>
+                            Quero construir minha marca. <i class="fa-solid fa-paper-plane ml-2"></i>
                         </button>
                     </form>
 
@@ -941,10 +896,8 @@
                 <span class="text-creamWhite/20">|</span>
                 <span id="footer-copyright" class="cursor-pointer">© 2026 Todos os direitos reservados.</span>
             </div>
-            <div class="flex gap-6" id="footer-links">
-                <a href="#" class="hover:text-creamWhite transition-colors interactive-target">Políticas</a>
-                <a href="#" class="hover:text-creamWhite transition-colors interactive-target">Parcerias</a>
-                <a href="#" class="hover:text-creamWhite transition-colors interactive-target">Termos de Uso</a>
+            <div class="flex flex-col items-center md:items-start text-center md:text-left gap-1">
+                <span class="text-creamWhite/80 font-bold uppercase tracking-widest">Branding com intenção, presença e profundidade.</span>
             </div>
             <div>
                 <span class="text-vibrantOrange font-bold uppercase tracking-widest">ORGULHOSAMENTE BRASILEIRO
@@ -1069,7 +1022,7 @@
 
     <!-- FLOATING SPOTIFY PLAYER (RÁDIO BOROGODÓ) -->
     <div id="radio-borogodo-widget" class="fixed bottom-6 right-6 z-40 flex flex-col items-end font-canvasans">
-        <!-- Sleek Slide-up Player Container -->
+        <!-- reprodutor -->
         <div id="spotify-player-card"
             class="hidden w-[320px] bg-creamWhite border-2 border-forestGreen rounded-[2rem] p-4 shadow-2xl mb-4 transition-all duration-500 scale-95 opacity-0 origin-bottom-right">
             <div class="flex justify-between items-center mb-3 pb-2 border-b border-forestGreen/10">
@@ -1079,7 +1032,7 @@
                 </div>
                 <button onclick="toggleSpotifyPlayer()"
                     class="text-stone-500 hover:text-vibrantOrange transition-colors cursor-pointer"
-                    aria-label="Fechar reprodutor de áudio">
+                    aria-label="Fechar reprodutor">
                     <i class="fa-solid fa-chevron-down text-xs"></i>
                 </button>
             </div>

@@ -10,8 +10,8 @@ tailwind.config = {
                 deepWine: '#500500',
             },
             fontFamily: {
-                tangarland: ['Fraunces', 'serif'],
-                canvasans: ['Plus Jakarta Sans', 'sans-serif'],
+                tangarland: ['Almarai', 'sans-serif'],
+                canvasans: ['Montserrat', 'sans-serif'],
             }
         }
     }

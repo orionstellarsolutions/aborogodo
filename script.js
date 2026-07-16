@@ -64,7 +64,7 @@ function triggerSensoryRitual(ritual) {
         if (mainBody) mainBody.className = "bg-creamWhite text-vibrantOrange font-canvasans antialiased theme-transition noise-texture selection:bg-skyBlue selection:text-white";
 
         if (heroTag) heroTag.innerHTML = `<span class="w-2 h-2 rounded-full bg-skyBlue"></span><span id="txt-hero-tag" class="editable-field">🍹 PÉ NA AREIA & CAIPIRINHA</span>`;
-        if (heroTitle) heroTitle.innerHTML = `Refresque a alma <br/><span class="text-forestGreen italic font-normal">brinde ao novo</span> <br/>com orgulho.`;
+        if (heroTitle) heroTitle.innerHTML = `Brasil no olhar. <br/><span class="text-forestGreen italic font-normal">Estratégia na cabeça.</span> <br/>Borogodó na marca.`;
 
         if (visualCard) visualCard.style.backgroundColor = "rgba(231, 93, 11, 0.08)";
         if (visualBadgeText) visualBadgeText.innerText = "Sunset Hour";
@@ -193,14 +193,14 @@ if (typeof window !== 'undefined') {
 }
 
 // MOVIMENTO PARALLAX COM O MOUSE (Reação física sutil no card visual, SVGs e selo)
-const heroSection = document.getElementById('hero-section');
-if (heroSection) {
+const ritualsSection = document.getElementById('rituals-section');
+if (ritualsSection) {
     const visualCard = document.getElementById('visual-card');
     const rotatingSeal = document.getElementById('rotating-seal');
     const visualIllustrationContainer = document.getElementById('visual-illustration-container');
 
-    heroSection.addEventListener('mousemove', (e) => {
-        const rect = heroSection.getBoundingClientRect();
+    ritualsSection.addEventListener('mousemove', (e) => {
+        const rect = ritualsSection.getBoundingClientRect();
         const x = e.clientX - rect.left - (rect.width / 2);
         const y = e.clientY - rect.top - (rect.height / 2);
 
@@ -220,7 +220,7 @@ if (heroSection) {
         }
     });
 
-    heroSection.addEventListener('mouseleave', () => {
+    ritualsSection.addEventListener('mouseleave', () => {
         if (visualCard) {
             visualCard.style.transform = 'translate(0px, 0px) rotateY(0deg) rotateX(0deg)';
         }
@@ -481,7 +481,7 @@ function fetchSubstackFeed() {
     const feedContainer = document.getElementById('substack-feed-container');
     if (!feedContainer) return;
 
-    fetch(proxyUrl)
+    return fetch(proxyUrl)
         .then(response => {
             if (!response.ok) throw new Error('Falha na resposta da rede');
             return response.json();
@@ -558,9 +558,56 @@ function fetchSubstackFeed() {
         })
         .catch(error => {
             console.warn('Erro ao carregar o feed do Substack (mantendo artigos estáticos de fallback):', error);
-            // Fallbacks originais definidos no HTML são mantidos intactos, pois a limpeza do container
-            // só ocorre após o parsing bem-sucedido dos posts.
         });
+}
+
+// CARREGAR LOGOS DE PARCEIROS DINAMICAMENTE
+async function loadPartnerLogos() {
+    const container = document.getElementById('marcas-logos');
+    if (!container) return;
+
+    const fallbackLogos = [
+        "Bandeirante Magazine", "Orion Stellar", "Rosie I Adore You", 
+        "Casa do Construtor", "Mansão Maromba", "Casa Bauducco", 
+        "Democrata", "Hectare", "Cheirin Bão"
+    ];
+
+    try {
+        const response = await fetch('assets/logos/');
+        if (!response.ok) throw new Error('Cannot fetch directory index');
+        
+        const html = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        
+        const links = Array.from(doc.querySelectorAll('a'))
+            .map(a => a.getAttribute('href'))
+            .filter(href => href && href.match(/\.(png|svg|jpg|jpeg|webp|gif)$/i));
+
+        if (links.length === 0) throw new Error('No images found in logos directory');
+
+        container.innerHTML = '';
+        links.forEach(link => {
+            const filename = link.split('/').pop();
+            const img = document.createElement('img');
+            img.src = `assets/logos/${filename}`;
+            const cleanName = filename.split('.')[0]
+                .replace(/[-_]/g, ' ')
+                .replace(/\b\w/g, c => c.toUpperCase());
+            img.alt = cleanName;
+            img.className = 'h-8 opacity-65 hover:opacity-100 transition-opacity duration-300 interactive-target object-contain';
+            container.appendChild(img);
+        });
+    } catch (error) {
+        console.warn('Dynamic logo listing not supported. Falling back to static list.', error);
+        container.innerHTML = '';
+        fallbackLogos.forEach(logoName => {
+            const span = document.createElement('span');
+            span.className = 'font-canvasans font-semibold text-lg tracking-widest text-forestGreen theme-transition interactive-target';
+            span.textContent = logoName;
+            container.appendChild(span);
+        });
+    }
 }
 
 // INICIALIZAÇÃO DO SITE NO LAYOUT BOSSA & BRISA COM MARESIA DE FORMA PADRÃO
@@ -568,6 +615,7 @@ if (typeof window !== 'undefined') {
     window.onload = function () {
         triggerSensoryRitual('coqueiro');
         fetchSubstackFeed();
+        loadPartnerLogos();
     };
 }
 
@@ -593,6 +641,7 @@ if (typeof module !== 'undefined' && module.exports) {
         submitBriefingForm,
         resetBriefingForm,
         toggleSpotifyPlayer,
-        fetchSubstackFeed
+        fetchSubstackFeed,
+        loadPartnerLogos
     };
 }
